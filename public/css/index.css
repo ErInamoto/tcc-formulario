@@ -1,0 +1,84 @@
+main{
+    padding: 40px;
+    
+    text-align: justify;
+    }
+    
+    header .material-symbols-outlined {
+        font-size: 36px;
+        background-color: red;
+    }
+    
+    header h1{
+        font-size: 150%;
+        text-align: center;
+            
+    }
+    
+    
+    .logo{
+        width: 80px;
+        margin-right: 20px;
+        text-align: center;
+    }
+    
+    .nomeTcc{
+        font-size: 38px;
+        margin-left: -20px;
+        text-align: center;
+    }
+    
+    .selecao{
+        padding-bottom: 5px;
+    }
+
+    .caixa{
+        width: 100%;
+    }
+    
+    .caixona{
+        width: 100%;
+        height: 100px;
+    }
+
+    .lbl-radio input {
+        display:none;       
+    }
+    
+    .avaliacao{
+        display: inline-flex;
+    }
+    
+    .numero{
+    font-size: 35px;
+    }
+    
+    .formulario{
+        font-size: larger;
+    }
+    
+/* Seleção azul da caixa     */
+    .lbl-radio input:checked + .material-symbols-outlined {
+        color: blue;
+    } 
+
+    .meu-input {
+        padding: 10px; /* Espaçamento interno */
+        padding-right: 40px; /* Espaçamento interno à direita */
+        border: 1px solid #ccc; /* Borda */
+        border-radius: 5px; /* Borda arredondada */
+        font-size: 16px; /* Tamanho da fonte */
+    }
+    
+    .header{ /* ou header */
+        background: #fcf8f8  
+    }
+    
+    body{
+         
+        background: #fcf8f8  
+    }
+    
+    .footer{
+        background: #fcf8f8  
+    }
