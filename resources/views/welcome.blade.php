@@ -181,10 +181,6 @@
         <input type="text" id="comentários e sugestões da mostra de TCC´s"
             name="comentários e sugestões da mostra de TCC´s" class="caixona" required>
         <br>
+        <input type="submit" value="Enviar">
     </form>
-
-    <input type="submit" value="Enviar">
-    </form>
-
-    </x-layout>
-</html>
+</x-layout>
