@@ -183,4 +183,5 @@
         <br>
         <input type="submit" value="Enviar">
     </form>
-</x-layout>
+    </x-layout>
+</html>
