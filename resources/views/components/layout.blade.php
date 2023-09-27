@@ -17,13 +17,9 @@
 
 <body>
     <header id="app-header" class="flex-row content-vcenter space-30 content-space-between box header">
-    <img src="/imagens/logo.png" class="logo">    
-    <h1 class="nomeTcc">Formulário</h1>
-        
-    </header>
+    <img src="/imagens/logo.png" class="logo">   {{ $slot }} 
 
-    <main class="grow">
-    {{ $slot }}
+
     </main>
 
     <footer id="app-footer" class="footer flex-row content-center box space-30">

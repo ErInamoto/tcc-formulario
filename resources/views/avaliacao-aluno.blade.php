@@ -1,4 +1,9 @@
 <x-layout>
+<h1 class="nomeTcc">Formulário</h1>
+        
+        </header>
+    
+        <main class="grow">
     <form action="/enviar" method="POST" class="formulario">
         <p>1 - Seu Nome</p>
         <input type="text" id="nome" name="nome" required class="caixa">
