@@ -27,6 +27,6 @@ class AvaliadorController extends Controller
 
     public function avaliarForm(Request $form)
 	{
-
+		$cursos = Curso::select('nome')->distinct()->get()->pluck('nome');
 	}
 }
