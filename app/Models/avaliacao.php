@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class avaliacao extends Model
+
+class Avaliacao extends Model
 {
     use HasFactory;
     protected $table = 'avaliacao';
@@ -14,6 +16,11 @@ class avaliacao extends Model
 
     public function curso(): BelongsTo
 {
-	return $this->belongsTo(curso::class, 'id_curso');
+	return $this->belongsTo(Curso::class, 'id_curso');
+}
+
+    public function tcc(): BelongsTo
+{
+    return $this->belongsTo(TCC::class, 'id_tcc');
 }
 }

@@ -4,20 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Curso extends Model
+
+
+class Aval_Prof extends Model
 {
     use HasFactory;
-    protected $table = 'curso';
+    protected $table = 'avaliacao';
     public $timestamps = false;
 
-    public function avaliacoes(): HasMany
+    public function tcc(): BelongsTo
     {
-        return $this->hasMany(Avaliacao::class, 'id_curso');
+        return $this->belongsTo(TCC::class, 'id_tcc');
     }
-
 }
-
-
-
