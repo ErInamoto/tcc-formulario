@@ -1,9 +1,4 @@
 <x-layout>
-<h1 class="nomeTcc">Formulário</h1>
-        
-        </header>
-    
-        <main class="grow">
     <form action="/enviar" method="POST" class="formulario">
         <p>1 - Seu Nome</p>
         <input type="text" id="nome" name="nome" required class="caixa">
@@ -27,14 +22,8 @@
             <option>Empreendedorismo</option>
         </select>
 
-        
-        <!-- <select name="curso" id="curso"></select>
-            <option value="" disabled hidden selected>Especialidade</option>
-            @foreach($cursos as $curso)
-            <option @if($curso == $cursoSelecionado) {{ 'selected' }} @endif>{{ $curso }}</option>
-            @endforeach
-        </select> -->
-        
+        <br>
+
         <p>3 - Selecione o Módulo</p>
         <select id="Modulo" class="caixa">
             <option value=""></option>

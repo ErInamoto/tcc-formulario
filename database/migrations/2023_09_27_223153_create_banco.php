@@ -1,0 +1,108 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Schema;
+
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        DB::statement("
+        CREATE TABLE tcc (
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            nome VARCHAR(100) NOT NULL  
+        );
+        ");
+
+        DB::statement("
+        CREATE TABLE curso(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            nome VARCHAR(100) NOT NULL
+            );
+        ");
+
+        DB::statement("
+        CREATE TABLE avaliacao_professor(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            professor VARCHAR(100) NOT NULL,
+            id_tcc INT NOT NULL,
+            comunicacao INT NOT NULL,
+            habilidades INT NOT NULL,
+            criatividade INT NOT NULL,
+            dinamica INT NOT NULL,
+            escrita INT NOT NULL,
+            avaliacao INT NOT NULL,
+            canvas INT NOT NULL,
+            impacto INT NOT NULL,
+            inclusao INT NOT NULL,
+            startup INT NOT NULL,
+            feteps INT NOT NULL,
+            inova INT NOT NULL,
+            workshop INT NOT NULL,
+            outro VARCHAR(100),
+            coment_tcc VARCHAR(100),
+            coment_mostra VARCHAR(100),
+            FOREIGN KEY (id_tcc) REFERENCES tcc(id)
+            );
+        ");
+
+        DB::statement("
+        CREATE TABLE avaliacao(
+            id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            id_tcc INT NOT NULL,
+            nome VARCHAR(100) NOT NULL,
+            id_curso int NOT NULL,
+            modulo INT NOT NULL,
+            apresentacao INT NOT NULL,
+            stand INT NOT NULL,
+            pratico INT NOT NULL,
+            viavel INT NOT NULL,
+            favoravel INT NOT NULL,
+            tecnologico INT NOT NULL,
+            pontos_fortes VARCHAR(300),
+            incompleto INT NOT NULL,
+            inviavel INT NOT NULL,
+            caro INT NOT NULL,
+            pontos_fracos VARCHAR(300),
+            inclusivo INT NOT NULL,
+            sustentavel INT NOT NULL,
+            startup INT NOT NULL,
+            comunicacao INT NOT NULL,
+            escrita INT NOT NULL,
+            avaliacao INT NOT NULL,
+            coment_tcc VARCHAR(300),
+            coment_mostra VARCHAR(300),
+            FOREIGN KEY (id_tcc) REFERENCES tcc(id),
+            FOREIGN KEY (id_curso) REFERENCES curso(id)
+            );
+        ");
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        DB::statement("
+            DROP TABLE IF EXISTS avaliacao
+        ");
+
+        DB::statement("
+            DROP TABLE IF EXISTS avaliacao_professor
+        ");
+
+        DB::statement("
+            DROP TABLE IF EXISTS curso
+        ");
+
+        DB::statement("
+            DROP TABLE IF EXISTS tcc
+        ");
+    }
+};
