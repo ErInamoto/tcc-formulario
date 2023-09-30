@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('avaliacao-aluno');
-});
+Route::get('/', 
+    [AvaliadorController::class, 'avaliarView']
+);
+
+Route::get('/salvar', 
+    [AvaliadorController::class, 'salvar']
+);
 
 Route::get('/avaliacao_professor', function () {
     return view('cadastro-usuario');
