@@ -26,14 +26,6 @@
             <option>Guia de Turismo</option>
             <option>Empreendedorismo</option>
         </select>
-
-        
-        <!-- <select name="curso" id="curso"></select>
-            <option value="" disabled hidden selected>Especialidade</option>
-            @foreach($cursos as $curso)
-            <option @if($curso == $cursoSelecionado) {{ 'selected' }} @endif>{{ $curso }}</option>
-            @endforeach
-        </select> -->
         
         <p>3 - Selecione o Módulo</p>
         <select id="Modulo" class="caixa">

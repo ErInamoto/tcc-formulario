@@ -1,4 +1,5 @@
 <x-layout>
+    <link rel="stylesheet" href="/css/avaliacao-professor.css">
 <h1 class="nomeTcc">Formulário Professores</h1>
         
         </header>
@@ -148,7 +149,7 @@
             </label>
             
             <label class="selecao flex-row content-vcenter gap-10">  
-                <input type="radio" name="mencao-6" value="I">
+                <input type="radio" name="menção-6" value="I">
                I (irregular)
                </label>
 
@@ -205,15 +206,15 @@
         <p>5 -Esse projeto pode ser apresentado na(o)?  (pode ser selecionado mais de uma opção)</p>
         FETEPS (Feira Tecnológica do CPS)
         <label class="selecao flex-row content-vcenter gap-10">  
-        <input type="radio" name="feteps" value="fet">
+        <input type="checkbox" name="feteps" value="fet">
                </label>
                ESCOLA DE INOVADORES (Agência INOVA) 
                <label class="selecao flex-row content-vcenter gap-10"> 
-                <input type="radio" name="ESCOLA DE INOVADORES (Agência INOVA)" value="inova">
+                <input type="checkbox" name="ESCOLA DE INOVADORES (Agência INOVA)" value="inova">
                </label>
                WORKSHOP ETEC / FEIRA DE PROFISSÕES
                <label class="selecao flex-row content-vcenter gap-10"> 
-                <input type="radio" name="WORKSHOP ETEC / FEIRA DE PROFISSÕES" value="workshop">
+                <input type="checkbox" name="WORKSHOP ETEC / FEIRA DE PROFISSÕES" value="workshop">
                </label>
                Outra
                <input type="text" id="Cometario" class="caixona">

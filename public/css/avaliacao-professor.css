@@ -1,0 +1,32 @@
+/* Esconda o círculo padrão */
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000000;
+    border-radius: 10%;
+  }
+  input[type="radio"]:checked::before {
+    display: block;
+    
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    color: #333; /* Cor do ícone */
+  }
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000000;
+    border-radius: 10%;
+  }
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  

@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/avaliacao_professor', function () {
-    return view('cadastro-usuario');
+    return view('avaliacao-professor');
 });
 
 Route::get('/login', function () {
