@@ -26,7 +26,7 @@
             </select>
 
             <p>3 - Selecione o Módulo</p>
-            <select id="Modulo" class="caixa" name="modulo" >
+            <select id="Modulo" class="caixa" name="modulo">
                 <option value=""></option>
                 <option>1°Modulo</option>
                 <option>2°Modulo</option>
@@ -153,55 +153,105 @@
                 <br>
             </div>
 
-            <p class="">9 - Atribua uma menção </p>
+            <p class="">9 - Assinale os Pontos Fortes </p>
+            <div class="radio">
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <input type="checkbox" name="pratico" id="pratico">É prático
+                </label>
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <input type="checkbox" name="viavel" id="viavel">É viável
+                </label>
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <input type="checkbox" name="benefico" id="benefico">Traz benefícios a comunidade
+                </label>
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <input type="checkbox" name="tecnologico" id="tecnologico">Está aliado com as tecnologias
+                </label>
+                <input type="text" id="Comentario" name="ponto_posit" class="caixona" placeholder="Outro">
+                <br>
+            </div>
+
+            <p class="">10 - Assinale os Pontos Fracos </p>
+            <div class="radio">
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <input type="checkbox" name="incompleto" id="incompleto">Precisa ser aperfeiçoado
+                </label>
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <input type="checkbox" name="inviavel" id="inviavel">Não é viável
+                </label>
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <input type="checkbox" name="caro" id="caro">É muito caro para ser implantado
+                </label>
+                <input type="text" id="Comentario" name="ponto_neg" class="caixona" placeholder="Outro">
+                <br>
+            </div>
+
+            <p class="">11 - Atribua uma menção à comunicação oral </p>
             <div>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="MB">
+                    <input type="radio" name="men_oral" value="oral_MB">
                     MB (Muito Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="B">
+                    <input type="radio" name="men_oral" value="oral_B">
                     B (Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="R">
+                    <input type="radio" name="men_oral" value="oral_R">
                     R (Regular)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="I">
+                    <input type="radio" name="men_oral" value="oral_I">
                     I (Insatisfatorio)
                 </label>
             </div>
 
-            <p class="">10 - Assinale os Pontos Fortes </p>
-            <div class="radio">
+            <p class="">12 - Atribua uma menção à apresentação escrita </p>
+            <div>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="checkbox" name="" id="">É prático
+                    <input type="radio" name="men_esc" value="esc_MB">
+                    MB (Muito Bom)
                 </label>
+
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <br> <input type="checkbox" name="" id="">É viável
+                    <input type="radio" name="men_esc" value="esc_B">
+                    B (Bom)
                 </label>
+
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <br> <input type="checkbox" name="" id="">Traz benefícios a comunidade
+                    <input type="radio" name="men_esc" value="esc_R">
+                    R (Regular)
                 </label>
+
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <br> <input type="checkbox" name="" id="">Está aliado com as tecnologias
+                    <input type="radio" name="men_esc" value="esc_I">
+                    I (Insatisfatorio)
                 </label>
             </div>
 
-            <p class="">11 - Assinale os Pontos Fracos </p>
-            <div class="radio">
+            <p class="">13 - Atribua uma menção </p>
+            <div>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="checkbox" name="" id="">Precisa ser aperfeiçoado
+                    <input type="radio" name="mencao" value="men_MB">
+                    MB (Muito Bom)
                 </label>
+
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <br> <input type="checkbox" name="" id="">Não é viável  
+                    <input type="radio" name="mencao" value="men_B">
+                    B (Bom)
                 </label>
+
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <br> <input type="checkbox" name="" id="">Traz benefícios a comunidade
+                    <input type="radio" name="mencao" value="men_R">
+                    R (Regular)
+                </label>
+
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <input type="radio" name="mencao" value="men_I">
+                    I (Insatisfatorio)
                 </label>
             </div>
 
@@ -212,28 +262,27 @@
 
             <p>Comentários e Sugestões da Mostra de TCC´s</p>
             <input type="text" id="comentários e sugestões da mostra de TCC´s" name="coment_feira" class="caixona">
-            <br>
+            <br><p></p>
             <input type="submit" value="Enviar">
         </form>
 
-    <script>
-        document.querySelector("form").addEventListener("submit", (event) => {
-            event.preventDefault();
+        <script>
+            document.querySelector("form").addEventListener("submit", (event) => {
+                event.preventDefault();
 
-            localStorage.setItem("Nome", document.querySelector("*[name='nome']").value);
-            localStorage.setItem("Curso", document.querySelector("*[name='curso']").value);
-            localStorage.setItem("Modulo", document.querySelector("*[name='modulo']").value);
+                localStorage.setItem("Nome", document.querySelector("*[name='nome']").value);
+                localStorage.setItem("Curso", document.querySelector("*[name='curso']").value);
+                localStorage.setItem("Modulo", document.querySelector("*[name='modulo']").value);
 
-            event.target.submit();
-        });
+                event.target.submit();
+            });
 
-        document.addEventListener("DOMContentLoaded", (event) => {
+            document.addEventListener("DOMContentLoaded", (event) => {
 
-            document.querySelector("*[name='nome']").value = localStorage.getItem("Nome");
-            document.querySelector("*[name='curso']").value = localStorage.getItem("Curso");
-            document.querySelector("*[name='modulo']").value = localStorage.getItem("Modulo");
+                document.querySelector("*[name='nome']").value = localStorage.getItem("Nome");
+                document.querySelector("*[name='curso']").value = localStorage.getItem("Curso");
+                document.querySelector("*[name='modulo']").value = localStorage.getItem("Modulo");
 
-        });
-
-    </script>
+            });
+        </script>
 </x-layout>
