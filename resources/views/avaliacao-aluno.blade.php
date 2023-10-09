@@ -17,32 +17,23 @@
             <input type="text" id="nome" name="nome" required class="caixa">
             <br>
 
-        <p>2 - Selecione o seu Curso</p>
-        <select id="cursos" class="caixa">
-            <option value=""></option>
-            <option>Segurança de Trabalho</option>
-            <option>Desenvolvimento de sistemas</option>
-            <option>Administração</option>
-            <option>informatica</option>
-            <option>Contabilidade</option>
-            <option>Serviços Juridicos</option>
-            <option>Enfermagem</option>
-            <option>Logistica</option>
-            <option>Comercio</option>
-            <option>Gestão de Projetos</option>
-            <option>Transações Imobiliárias</option>
-            <option>Guia de Turismo</option>
-            <option>Empreendedorismo</option>
-        </select>
-        
-        <p>3 - Selecione o Módulo</p>
-        <select id="Modulo" class="caixa">
-            <option value=""></option>
-            <option>1°Modulo</option>
-            <option>2°Modulo</option>
-            <option>3°Modulo</option>
-            <option>Visitantes</option>
-        </select>
+            <p>2 - Selecione o seu Curso</p>
+            <select id="curso" class="caixa" name="curso">
+                <option value=""></option>
+                @foreach($cursos as $curso)
+                <option value="{{ $curso->id }}">{{ $curso->nome }}</option>
+                @endforeach
+            </select>
+
+            <p>3 - Selecione o Módulo</p>
+            <select id="Modulo" class="caixa" name="modulo" >
+                <option value=""></option>
+                <option>1°Modulo</option>
+                <option>2°Modulo</option>
+                <option>3°Modulo</option>
+                <option>4°Modulo</option>
+                <option>Visitantes</option>
+            </select>
 
             <p>4 - Avalie a criatividade na apresentação de 1 a 5</p>
             <div class="avaliacao">
@@ -149,7 +140,7 @@
                 <br>
             </div>
 
-            <p class="">8 - Tem Possibilidade de se tornar uma Startup? </p>
+            <p class="">8 - Tem Possibilidade de se tornar uma Starup? </p>
             <div class="radio">
                 <label class="selecao flex-row content-vcenter gap-10">
                     <input type="radio" name="startup" value="sim">
@@ -216,7 +207,7 @@
 
             <br>
             <p>Comentários e Sugestões do Trabalho Avaliado</p>
-            <input type="text" id="Cometario" name="coment_TCC" class="caixona">
+            <input type="text" id="Comentario" name="coment_TCC" class="caixona">
             <br>
 
             <p>Comentários e Sugestões da Mostra de TCC´s</p>

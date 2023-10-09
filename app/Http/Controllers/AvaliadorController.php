@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\curso;
 use Illuminate\Http\Request;
-use App\Models\avaliacao;
+use App\Models\Avaliacao;
+use App\Models\TCC;
+use App\Models\Curso;
 use Illuminate\Support\Facades\Session;
 
 
 class AvaliadorController extends Controller
 {
-    public function listar()
+    public function salvar(Request $request)
 	{
 		$form = $request->all();
 		$avaliacao = new Avaliacao;
@@ -41,11 +42,14 @@ class AvaliadorController extends Controller
 
     public function avaliarView()
 	{
-		return view('avaliar');
+		$avaliacoes = Avaliacao::all();
+		$cursos = Curso::all();
+		$TCCs= TCC::all();
+
+		return view('avaliacao-aluno', [
+			'TCCs' => $TCCs,
+			'cursos' => $cursos,
+		]);
 	}
 
-    public function avaliarForm(Request $form)
-	{
-		$cursos = Curso::select('nome')->distinct()->get()->pluck('nome');
-	}
 }
