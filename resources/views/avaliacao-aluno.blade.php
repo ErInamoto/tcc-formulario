@@ -140,14 +140,14 @@
                 <br>
             </div>
 
-            <p class="">8 - Tem Possibilidade de se tornar uma Starup? </p>
+            <p class="">8 - Tem Possibilidade de se tornar uma Startup? </p>
             <div class="radio">
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="starup" value="sim">
+                    <input type="radio" name="startup" value="sim">
                     Sim
                 </label>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="starup" value="nao">
+                    <input type="radio" name="startup" value="nao">
                     Não
                 </label>
                 <br>
@@ -175,13 +175,43 @@
                     I (Insatisfatorio)
                 </label>
             </div>
+
+            <p class="">10 - Assinale os Pontos Fortes </p>
+            <div class="radio">
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <input type="checkbox" name="" id="">É prático
+                </label>
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <br> <input type="checkbox" name="" id="">É viável
+                </label>
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <br> <input type="checkbox" name="" id="">Traz benefícios a comunidade
+                </label>
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <br> <input type="checkbox" name="" id="">Está aliado com as tecnologias
+                </label>
+            </div>
+
+            <p class="">11 - Assinale os Pontos Fracos </p>
+            <div class="radio">
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <input type="checkbox" name="" id="">Precisa ser aperfeiçoado
+                </label>
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <br> <input type="checkbox" name="" id="">Não é viável  
+                </label>
+                <label class="selecao flex-row content-vcenter gap-10">
+                    <br> <input type="checkbox" name="" id="">Traz benefícios a comunidade
+                </label>
+            </div>
+
             <br>
             <p>Comentários e Sugestões do Trabalho Avaliado</p>
-            <input type="text" id="Cometario" name="Coment_TCC" class="caixona">
+            <input type="text" id="Cometario" name="coment_TCC" class="caixona">
             <br>
 
             <p>Comentários e Sugestões da Mostra de TCC´s</p>
-            <input type="text" id="comentários e sugestões da mostra de TCC´s" name="Coment_Feira" class="caixona">
+            <input type="text" id="comentários e sugestões da mostra de TCC´s" name="coment_feira" class="caixona">
             <br>
             <input type="submit" value="Enviar">
         </form>

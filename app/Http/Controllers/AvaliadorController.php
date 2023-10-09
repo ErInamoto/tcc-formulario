@@ -32,14 +32,14 @@ class AvaliadorController extends Controller
 		$avaliacao->inviavel= " ";
 		$avaliacao->caro= " ";
 		$avaliacao->pontos_fracos= " ";
-		$avaliacao->inclusivo= " ";
+		$avaliacao->inclusivo= "acessibilidade";
 		$avaliacao->sustentavel= "sustentavel";
 		$avaliacao->startup= "startup";
 		$avaliacao->comunicacao= " ";
 		$avaliacao->escrita= " ";
 		$avaliacao->avaliacao= "mencao";
-		$avaliacao->coment_tcc= " ";
-		$avaliacao->coment_mostra= " ";
+		$avaliacao->coment_tcc= "coment_TCC";
+		$avaliacao->coment_mostra= "coment_feira";
 	}
 
     public function avaliarView()
