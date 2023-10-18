@@ -17,9 +17,8 @@
 
 <body>
     <header id="app-header" class="flex-row content-vcenter space-30 content-space-between box header">
-    <img src="/imagens/logo.png" class="logo">   {{ $slot }} 
-
-
+    <img src="/imagens/logo.png" class="logo">   
+    {{ $slot }} 
     </main>
 
     <footer id="app-footer" class="footer flex-row content-center box space-30">

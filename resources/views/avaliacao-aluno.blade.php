@@ -3,7 +3,7 @@
     </header>
     <main class="grow">
 
-        <form action="/salvar" method="GET" class="formulario">
+        <form action="/salvar" method="POST" class="formulario">
 
             <p>TCC avaliado</p>
             <select name="TCC" id="TCC" class="caixa">
@@ -28,45 +28,45 @@
             <p>3 - Selecione o Módulo</p>
             <select id="Modulo" class="caixa" name="modulo">
                 <option value=""></option>
-                <option>1°Modulo</option>
-                <option>2°Modulo</option>
-                <option>3°Modulo</option>
-                <option>4°Modulo</option>
-                <option>Visitantes</option>
+                <option value="1">1°Modulo</option>
+                <option value="2">2°Modulo</option>
+                <option value="3">3°Modulo</option>
+                <option value="4">4°Modulo</option>
+                <option value="5">Visitantes</option>
             </select>
 
             <p>4 - Avalie a criatividade na apresentação de 1 a 5</p>
             <div class="avaliacao">
                 <label class="lbl-radio">
-                    <input class="" type="radio" name="apresentacao" value="1">
+                    <input class="" type="radio" name="apresentacao" value="1" required>
                     <span class="numero material-symbols-outlined">
                         looks_one
                     </span>
                 </label>
 
                 <label class="lbl-radio">
-                    <input class="" type="radio" name="apresentacao" value="2">
+                    <input class="" type="radio" name="apresentacao" value="2" required>
                     <span class="numero material-symbols-outlined">
                         looks_two
                     </span>
                 </label>
 
                 <label class="lbl-radio">
-                    <input class="" type="radio" name="apresentacao" value="3">
+                    <input class="" type="radio" name="apresentacao" value="3" required>
                     <span class="numero material-symbols-outlined">
                         looks_3
                     </span>
                 </label>
 
                 <label class="lbl-radio">
-                    <input class="" type="radio" name="apresentacao" value="4">
+                    <input class="" type="radio" name="apresentacao" value="4" required>
                     <span class="numero material-symbols-outlined">
                         looks_4
                     </span>
                 </label>
 
                 <label class="lbl-radio">
-                    <input class="" type="radio" name="apresentacao" value="5">
+                    <input class="" type="radio" name="apresentacao" value="5" required>
                     <span class="numero material-symbols-outlined">
                         looks_5
                     </span>
@@ -78,7 +78,7 @@
             <p>5 - Avalie a criatividade utilizada no Stand de 1 a 5</p>
             <div class="avaliacao">
                 <label class="lbl-radio">
-                    <input class="" type="radio" name="stand" value="1">
+                    <input class="" type="radio" name="stand" value="1" required>
                     <span class="numero material-symbols-outlined">
 
                         looks_one
@@ -87,26 +87,26 @@
                 </label>
 
                 <label class="lbl-radio">
-                    <input class="" type="radio" name="stand" value="2">
+                    <input class="" type="radio" name="stand" value="2" required>
                     <span class="numero material-symbols-outlined">
                         looks_two
                     </span>
                 </label>
                 <label class="lbl-radio">
-                    <input class="" type="radio" name="stand" value="3">
+                    <input class="" type="radio" name="stand" value="3" required>
                     <span class="numero numero material-symbols-outlined">
                         looks_3
                     </span>
                 </label>
 
                 <label class="lbl-radio">
-                    <input class="" type="radio" name="stand" value="4">
+                    <input class="" type="radio" name="stand" value="4" required>
                     <span class="numero material-symbols-outlined">
                         looks_4
                     </span>
                 </label>
                 <label class="lbl-radio">
-                    <input class="" type="radio" name="stand" value="5">
+                    <input class="" type="radio" name="stand" value="5" required>
                     <span class="numero material-symbols-outlined">
                         looks_5
                     </span>
@@ -117,11 +117,11 @@
             <p class="">6 - Tem Aspectos de Inclusão/acessibilidade </p>
             <div class="radio">
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="acessibilidade" value="sim">
+                    <input type="radio" name="acessibilidade" value="1" required>
                     Sim
                 </label>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="acessibilidade" value="nao">
+                    <input type="radio" name="acessibilidade" value="0" required>
                     Não
                 </label>
                 <br>
@@ -130,11 +130,11 @@
             <p class="">7 - Contempla a sustentabilidade</p>
             <div class="radio">
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="sustentabilidade" value="sim">
+                    <input type="radio" name="sustentabilidade" value="1" required>
                     Sim
                 </label>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="sustentabilidade" value="nao">
+                    <input type="radio" name="sustentabilidade" value="0" required>
                     Não
                 </label>
                 <br>
@@ -142,12 +142,12 @@
 
             <p class="">8 - Tem Possibilidade de se tornar uma Starup? </p>
             <div class="radio">
-                <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="startup" value="sim">
+                <label class="selecao flex-row content-vcenter gap-10" >
+                    <input type="radio" name="startup" value="1" required>
                     Sim
                 </label>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="startup" value="nao">
+                    <input type="radio" name="startup" value="0" required>
                     Não
                 </label>
                 <br>
@@ -156,16 +156,16 @@
             <p class="">9 - Assinale os Pontos Fortes </p>
             <div class="radio">
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="checkbox" name="pratico" id="pratico">É prático
+                    <input type="checkbox" name="pratico" id="pratico" value="1">É prático
                 </label>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="checkbox" name="viavel" id="viavel">É viável
+                    <input type="checkbox" name="viavel" id="viavel" value="1">É viável
                 </label>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="checkbox" name="benefico" id="benefico">Traz benefícios a comunidade
+                    <input type="checkbox" name="benefico" id="benefico" value="1">Traz benefícios a comunidade
                 </label>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="checkbox" name="tecnologico" id="tecnologico">Está aliado com as tecnologias
+                    <input type="checkbox" name="tecnologico" id="tecnologico" value="1">Está aliado com as tecnologias
                 </label>
                 <input type="text" id="Comentario" name="ponto_posit" class="caixona" placeholder="Outro">
                 <br>
@@ -174,13 +174,13 @@
             <p class="">10 - Assinale os Pontos Fracos </p>
             <div class="radio">
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="checkbox" name="incompleto" id="incompleto">Precisa ser aperfeiçoado
+                    <input type="checkbox" name="incompleto" id="incompleto" value="1">Precisa ser aperfeiçoado
                 </label>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="checkbox" name="inviavel" id="inviavel">Não é viável
+                    <input type="checkbox" name="inviavel" id="inviavel" value="1">Não é viável
                 </label>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="checkbox" name="caro" id="caro">É muito caro para ser implantado
+                    <input type="checkbox" name="caro" id="caro" value="1">É muito caro para ser implantado
                 </label>
                 <input type="text" id="Comentario" name="ponto_neg" class="caixona" placeholder="Outro">
                 <br>
@@ -189,22 +189,22 @@
             <p class="">11 - Atribua uma menção à comunicação oral </p>
             <div>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_oral" value="oral_MB">
+                    <input type="radio" name="men_oral" value="4" required>
                     MB (Muito Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_oral" value="oral_B">
+                    <input type="radio" name="men_oral" value="3" required>
                     B (Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_oral" value="oral_R">
+                    <input type="radio" name="men_oral" value="2" required>
                     R (Regular)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_oral" value="oral_I">
+                    <input type="radio" name="men_oral" value="1" required>
                     I (Insatisfatorio)
                 </label>
             </div>
@@ -212,22 +212,22 @@
             <p class="">12 - Atribua uma menção à apresentação escrita </p>
             <div>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_esc" value="esc_MB">
+                    <input type="radio" name="men_esc" value="4" required> 
                     MB (Muito Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_esc" value="esc_B">
+                    <input type="radio" name="men_esc" value="3" required>
                     B (Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_esc" value="esc_R">
+                    <input type="radio" name="men_esc" value="2" required>
                     R (Regular)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_esc" value="esc_I">
+                    <input type="radio" name="men_esc" value="1" required>
                     I (Insatisfatorio)
                 </label>
             </div>
@@ -235,22 +235,22 @@
             <p class="">13 - Atribua uma menção </p>
             <div>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="men_MB">
+                    <input type="radio" name="mencao" value="4" required>
                     MB (Muito Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="men_B">
+                    <input type="radio" name="mencao" value="3" required>
                     B (Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="men_R">
+                    <input type="radio" name="mencao" value="2" required>
                     R (Regular)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="men_I">
+                    <input type="radio" name="mencao" value="1" required>
                     I (Insatisfatorio)
                 </label>
             </div>
@@ -264,6 +264,7 @@
             <input type="text" id="comentários e sugestões da mostra de TCC´s" name="coment_feira" class="caixona">
             <br><p></p>
             <input type="submit" value="Enviar">
+            @csrf
         </form>
 
         <script>

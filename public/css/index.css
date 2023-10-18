@@ -41,8 +41,15 @@ main{
         height: 100px;
     }
 
+    .lbl-radio {
+        cursor: pointer;
+    }
+
     .lbl-radio input {
-        display:none;       
+        margin-right: -33px;
+        opacity: 0;
+        position: relative;
+        z-index: -1;
     }
     
     .avaliacao{

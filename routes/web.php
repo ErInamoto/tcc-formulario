@@ -18,8 +18,20 @@ Route::get('/',
     [AvaliadorController::class, 'avaliarView']
 );
 
-Route::get('/salvar', 
+Route::post('/salvar', 
     [AvaliadorController::class, 'salvar']
+);
+
+Route::post('/enviado', 
+    [AvaliadorController::class, 'salvar']
+);
+
+Route::get('/resultado', 
+    [AvaliadorController::class, 'resultado']
+);
+
+Route::get('/selecao', 
+    [AvaliadorController::class, 'selecao']
 );
 
 Route::get('/avaliacao_professor', function () {

@@ -15,29 +15,51 @@ class AvaliadorController extends Controller
 	{
 		$form = $request->all();
 		$avaliacao = new Avaliacao;
-		$avaliacao->id_tcc ="TCC";
-		$avaliacao->nome= "nome";
-		$avaliacao->id_curso= "curso";
-		$avaliacao->modulo= "modulo";
-		$avaliacao->apresentacao= "apresentacao";
-		$avaliacao->stand= "stand";
-		$avaliacao->pratico= "pratico";
-		$avaliacao->viavel= "viavel";
-		$avaliacao->favoravel= "benefico";
-		$avaliacao->tecnologico= "tecnologico";
-		$avaliacao->pontos_fortes= "ponto_posit";
-		$avaliacao->incompleto= "incompleto";
-		$avaliacao->inviavel= "inviavel";
-		$avaliacao->caro= "caro";
-		$avaliacao->pontos_fracos= "ponto_neg";
-		$avaliacao->inclusivo= "acessibilidade";
-		$avaliacao->sustentavel= "sustentavel";
-		$avaliacao->startup= "startup";
-		$avaliacao->comunicacao= "men_oral";
-		$avaliacao->escrita= "men_esc";
-		$avaliacao->avaliacao= "mencao";
-		$avaliacao->coment_tcc= "coment_TCC";
-		$avaliacao->coment_mostra= "coment_feira";
+		$avaliacao->id_tcc =$form["TCC"];
+		$avaliacao->nome= $form["nome"];
+		$avaliacao->id_curso= $form["curso"];
+		$avaliacao->modulo= $form["modulo"];
+		$avaliacao->apresentacao= $form["apresentacao"];
+		$avaliacao->stand= $form["stand"];
+		$avaliacao->pratico= @$form["pratico"];
+		$avaliacao->viavel= @$form["viavel"];
+		$avaliacao->favoravel= @$form["benefico"];
+		$avaliacao->tecnologico= @$form["tecnologico"];
+		$avaliacao->pontos_fortes= @$form["ponto_posit"];
+		$avaliacao->incompleto= @$form["incompleto"];
+		$avaliacao->inviavel= @$form["inviavel"];
+		$avaliacao->caro= @$form["caro"];
+		$avaliacao->pontos_fracos= @$form["ponto_neg"];
+		$avaliacao->inclusivo= $form["acessibilidade"];
+		$avaliacao->sustentavel= @$form["sustentavel"];
+		$avaliacao->startup= @$form["startup"];
+		$avaliacao->comunicacao= $form["men_oral"];
+		$avaliacao->escrita= $form["men_esc"];
+		$avaliacao->avaliacao= $form["mencao"];
+		$avaliacao->coment_tcc= @$form["coment_TCC"];
+		$avaliacao->coment_mostra= @$form["coment_feira"];
+		$avaliacao->save();
+		return view('enviado');
+	}
+
+	public function selecao(Request $request)
+	{
+		$avaliacoes = Avaliacao::all();
+		$cursos = Curso::all();
+		$TCCs= TCC::all();
+
+		return view('selecao', [
+			'TCCs' => $TCCs,
+			'cursos' => $cursos,
+		]);
+		
+		
+	}
+
+	public function resultado(Request $request)
+	{
+		return view('resultado');
+		
 	}
 
     public function avaliarView()
