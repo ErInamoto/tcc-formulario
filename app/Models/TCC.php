@@ -63,4 +63,20 @@ class TCC extends Model
     public function porcentagemCaro(){
         return round($this->avaliacoes->where("caro", "=", 1)->count() / $this->avaliacoes->count()*100,1);
     }
+
+    public function porcentagemOralMB(){
+        return round($this->avaliacoes->where("comunicacao", "=", 4)->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemOralB(){
+        return round($this->avaliacoes->where("comunicacao", "=", 3)->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemOralR(){
+        return round($this->avaliacoes->where("comunicacao", "=", 2)->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemOralI(){
+        return round($this->avaliacoes->where("comunicacao", "=", 1)->count() / $this->avaliacoes->count()*100,1);
+    }
 }
