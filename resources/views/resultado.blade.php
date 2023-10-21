@@ -165,6 +165,12 @@
             Nome
         </th>
         <th>
+            Curso
+        </th>
+        <th>
+            Módulo
+        </th>
+        <th>
             Oral
         </th>
         <th>
@@ -179,6 +185,12 @@
         <tr>
             <td>
                 {{ $Av->nome }}
+            </td>
+            <td>
+                {{ $Av->curso->nome}}
+            </td>
+            <td>
+                {{ $Av->modulo }}
             </td>
             <td>
                 {{ $Av->comunicacao}}
