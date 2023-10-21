@@ -189,22 +189,22 @@
             <p class="">11 - Atribua uma menção à comunicação oral </p>
             <div>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_oral" value="4" required>
+                    <input type="radio" name="men_oral" value="MB" required>
                     MB (Muito Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_oral" value="3" required>
+                    <input type="radio" name="men_oral" value="B" required>
                     B (Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_oral" value="2" required>
+                    <input type="radio" name="men_oral" value="R" required>
                     R (Regular)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_oral" value="1" required>
+                    <input type="radio" name="men_oral" value="I" required>
                     I (Insatisfatorio)
                 </label>
             </div>
@@ -212,22 +212,22 @@
             <p class="">12 - Atribua uma menção à apresentação escrita </p>
             <div>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_esc" value="4" required> 
+                    <input type="radio" name="men_esc" value="MB" required> 
                     MB (Muito Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_esc" value="3" required>
+                    <input type="radio" name="men_esc" value="B" required>
                     B (Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_esc" value="2" required>
+                    <input type="radio" name="men_esc" value="R" required>
                     R (Regular)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="men_esc" value="1" required>
+                    <input type="radio" name="men_esc" value="I" required>
                     I (Insatisfatorio)
                 </label>
             </div>
@@ -235,22 +235,22 @@
             <p class="">13 - Atribua uma menção </p>
             <div>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="4" required>
+                    <input type="radio" name="mencao" value="MB" required>
                     MB (Muito Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="3" required>
+                    <input type="radio" name="mencao" value="B" required>
                     B (Bom)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="2" required>
+                    <input type="radio" name="mencao" value="R" required>
                     R (Regular)
                 </label>
 
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="mencao" value="1" required>
+                    <input type="radio" name="mencao" value="I" required>
                     I (Insatisfatorio)
                 </label>
             </div>

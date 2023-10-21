@@ -8,7 +8,7 @@ use App\Models\TCC;
 use App\Models\Curso;
 use Illuminate\Support\Facades\Session;
 
-
+ 
 class AvaliadorController extends Controller
 {
     public function salvar(Request $request)
@@ -60,9 +60,11 @@ class AvaliadorController extends Controller
 	{
 		$id=$request->input('id');
 		$TCC=TCC::find($id);
+		$avaliacoes = Avaliacao::all();
 		return view('resultado',
 	[
 		'TCC'=>$TCC,
+		'Avaliacoes'=>$avaliacoes
 	]);
 		
 	}

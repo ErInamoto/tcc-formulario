@@ -99,6 +99,101 @@
     </div>
 </div>
 
+<div class="flex-row">
+    <div class="flex-col">
+        Comunicação Escrita
+    </div>
+</div>
+
+<div class="flex-row">
+    <div class="flex-col">
+        MB{{ $TCC->porcentagemEscritaMB() }}%
+    </div>
+</div>
+
+<div class="flex-row">
+    <div class="flex-col">
+        B{{ $TCC->porcentagemEscritaB() }}%
+    </div>
+</div>
+
+<div class="flex-row">
+    <div class="flex-col">
+        R{{ $TCC->porcentagemEscritaR() }}%
+    </div>
+</div>
+
+<div class="flex-row">
+    <div class="flex-col">
+        I{{ $TCC->porcentagemEscritaI() }}%
+    </div>
+</div>
+
+<div class="flex-row">
+    <div class="flex-col">
+        Avaliação Geral
+    </div>
+</div>
+
+<div class="flex-row">
+    <div class="flex-col">
+        MB{{ $TCC->porcentagemAvaliacaoMB() }}%
+    </div>
+</div>
+
+<div class="flex-row">
+    <div class="flex-col">
+        B{{ $TCC->porcentagemAvaliacaoB() }}%
+    </div>
+</div>
+
+<div class="flex-row">
+    <div class="flex-col">
+        R{{ $TCC->porcentagemAvaliacaoR() }}%
+    </div>
+</div>
+
+<div class="flex-row">
+    <div class="flex-col">
+        I{{ $TCC->porcentagemAvaliacaoI() }}%
+    </div>
+</div>
+
+<table>
+    <thead>
+        <th>
+            Nome
+        </th>
+        <th>
+            Oral
+        </th>
+        <th>
+            Escrita
+        </th>
+        <th>
+            Geral
+        </th>
+    </thead>
+    <tbody>
+        @foreach ($Avaliacoes as $Av)
+        <tr>
+            <td>
+                {{ $Av->nome }}
+            </td>
+            <td>
+                {{ $Av->comunicacao}}
+            </td>
+            <td>
+                {{ $Av->escrita}}
+            </td>
+            <td>
+                {{ $Av->avaliacao}}
+            </td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+
 
 
 

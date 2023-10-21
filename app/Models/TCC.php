@@ -65,18 +65,50 @@ class TCC extends Model
     }
 
     public function porcentagemOralMB(){
-        return round($this->avaliacoes->where("comunicacao", "=", 4)->count() / $this->avaliacoes->count()*100,1);
+        return round($this->avaliacoes->where("comunicacao", "=", "MB")->count() / $this->avaliacoes->count()*100,1);
     }
 
     public function porcentagemOralB(){
-        return round($this->avaliacoes->where("comunicacao", "=", 3)->count() / $this->avaliacoes->count()*100,1);
+        return round($this->avaliacoes->where("comunicacao", "=", "B")->count() / $this->avaliacoes->count()*100,1);
     }
 
     public function porcentagemOralR(){
-        return round($this->avaliacoes->where("comunicacao", "=", 2)->count() / $this->avaliacoes->count()*100,1);
+        return round($this->avaliacoes->where("comunicacao", "=", "R")->count() / $this->avaliacoes->count()*100,1);
     }
 
     public function porcentagemOralI(){
-        return round($this->avaliacoes->where("comunicacao", "=", 1)->count() / $this->avaliacoes->count()*100,1);
+        return round($this->avaliacoes->where("comunicacao", "=", "I")->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemEscritaMB(){
+        return round($this->avaliacoes->where("escrita", "=", "MB")->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemEscritaB(){
+        return round($this->avaliacoes->where("escrita", "=", "B")->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemEscritaR(){
+        return round($this->avaliacoes->where("escrita", "=", "R")->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemEscritaI(){
+        return round($this->avaliacoes->where("escrita", "=", "I")->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemAvaliacaoMB(){
+        return round($this->avaliacoes->where("avaliacao", "=", "MB")->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemAvaliacaoB(){
+        return round($this->avaliacoes->where("avaliacao", "=", "B")->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemAvaliacaoR(){
+        return round($this->avaliacoes->where("avaliacao", "=", "R")->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function porcentagemAvaliacaoI(){
+        return round($this->avaliacoes->where("avaliacao", "=", "I")->count() / $this->avaliacoes->count()*100,1);
     }
 }
