@@ -58,7 +58,12 @@ class AvaliadorController extends Controller
 
 	public function resultado(Request $request)
 	{
-		return view('resultado');
+		$id=$request->input('id');
+		$TCC=TCC::find($id);
+		return view('resultado',
+	[
+		'TCC'=>$TCC,
+	]);
 		
 	}
 

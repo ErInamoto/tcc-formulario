@@ -3,7 +3,7 @@
     </header>
     <main class="grow">
 
-        <form action="/salvar" method="POST" class="formulario">
+        <form action="/salvar" method="POST" class="formulario" required>
 
             <p>TCC avaliado</p>
             <select name="TCC" id="TCC" class="caixa">
@@ -18,7 +18,7 @@
             <br>
 
             <p>2 - Selecione o seu Curso</p>
-            <select id="curso" class="caixa" name="curso">
+            <select id="curso" class="caixa" name="curso" required>
                 <option value=""></option>
                 @foreach($cursos as $curso)
                 <option value="{{ $curso->id }}">{{ $curso->nome }}</option>
@@ -130,11 +130,11 @@
             <p class="">7 - Contempla a sustentabilidade</p>
             <div class="radio">
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="sustentabilidade" value="1" required>
+                    <input type="radio" name="sustentavel" value="1" required>
                     Sim
                 </label>
                 <label class="selecao flex-row content-vcenter gap-10">
-                    <input type="radio" name="sustentabilidade" value="0" required>
+                    <input type="radio" name="sustentavel" value="0" required>
                     Não
                 </label>
                 <br>

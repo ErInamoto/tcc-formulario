@@ -22,7 +22,7 @@ Route::post('/salvar',
     [AvaliadorController::class, 'salvar']
 );
 
-Route::post('/enviado', 
+Route::get('/enviado', 
     [AvaliadorController::class, 'salvar']
 );
 

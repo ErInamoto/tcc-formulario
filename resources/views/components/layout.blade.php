@@ -18,6 +18,8 @@
 <body>
     <header id="app-header" class="flex-row content-vcenter space-30 content-space-between box header">
     <img src="/imagens/logo.png" class="logo">   
+    </header>
+    <main>
     {{ $slot }} 
     </main>
 
