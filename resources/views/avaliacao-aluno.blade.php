@@ -1,7 +1,7 @@
 <x-layout>
     <h1 class="nomeTcc">Formulário</h1>
     </header>
-    <main class="grow">
+
 
         <form action="/salvar" method="POST" class="formulario" required>
 

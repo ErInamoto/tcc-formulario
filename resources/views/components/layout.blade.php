@@ -19,7 +19,7 @@
     <header id="app-header" class="flex-row content-vcenter space-30 content-space-between box header">
     <img src="/imagens/logo.png" class="logo">   
     </header>
-    <main>
+    <main class="grow">
     {{ $slot }} 
     </main>
 

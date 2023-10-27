@@ -18,6 +18,7 @@ return new class extends Migration
         values ('Administração'), ('Contabilidade'), ('Desenvolvimento de Sistemas'), ('Enfermagem'), ('ETIM Administração'), ('ETIM Desenvolvimento de Sistemas'), ('Informática'), ('Logística'), ('Segurança do Trabalho'), ('Serviços Jurídicos'), ('Visitante');
         ");
     }
+    
 
     /**
      * Reverse the migrations.
