@@ -34,6 +34,10 @@ Route::get('/selecao',
     [AvaliadorController::class, 'selecao']
 );
 
+Route::get('detalhado',
+    [AvaliadorController::class, 'detalhado']
+);
+
 Route::get('/avaliacao_professor', function () {
     return view('cadastro-usuario');
 });

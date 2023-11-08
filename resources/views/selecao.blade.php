@@ -1,4 +1,5 @@
-<x-layout> <table> <thead>
+<x-layout> 
+    <table> <thead>
     <tr>
     <th> Nome do TCC </th>
     <th> Avaliações </th>

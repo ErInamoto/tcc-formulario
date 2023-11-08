@@ -217,6 +217,11 @@
                 <td>
                     {{ $Av->avaliacao}}
                 </td>
+                <td>
+                    <a href="detalhado?id={{ $Av->id }}">
+                        Detalhado
+                    </a>
+                </td>
             </tr>
             @endforeach
         </tbody>

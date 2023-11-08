@@ -1,8 +1,6 @@
 <x-layout>
     <h1 class="nomeTcc">Formulário</h1>
-    </header>
-
-
+    
         <form action="/salvar" method="POST" class="formulario" required>
 
             <p>TCC avaliado</p>

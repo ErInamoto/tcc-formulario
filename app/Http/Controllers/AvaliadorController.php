@@ -69,6 +69,17 @@ class AvaliadorController extends Controller
 		
 	}
 
+	public function detalhado(Request $request){
+		$id=$request->input('id');
+		$avaliacao=Avaliacao::find($id);
+		$detalhado = Avaliacao::all();
+		return view('detalhado',
+		[
+			'Avaliacao'=>$avaliacao,
+			'detalhado'=>$detalhado
+		]);
+	}
+
     public function avaliarView()
 	{
 		$avaliacoes = Avaliacao::all();
