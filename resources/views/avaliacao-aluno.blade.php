@@ -1,5 +1,5 @@
 <x-layout>
-    <h1 class="nomeTcc">Formulário</h1>
+    <h1 class="titulo">Formulário</h1>
     
         <form action="/salvar" method="POST" class="formulario" required>
 

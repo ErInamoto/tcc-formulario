@@ -4,7 +4,7 @@
     <table>
         <thead>
             <th colspan="5" class="center">
-                Resumo de Avaliações
+                Resumo de Avaliações dos Alunos
             </th>
         </thead>
 
@@ -194,6 +194,9 @@
             </th>
             <th>
                 Geral
+            </th>
+            <th>
+
             </th>
         </thead>
         <tbody>

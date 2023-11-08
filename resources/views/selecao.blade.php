@@ -1,4 +1,6 @@
 <x-layout> 
+    <h1>Selecione um TCC para ver mais detalhes</h1>
+    <br><br>
     <table> <thead>
     <tr>
     <th> Nome do TCC </th>

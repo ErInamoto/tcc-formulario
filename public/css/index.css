@@ -22,7 +22,11 @@ main{
         text-align: center;
     }
     
-    .nomeTcc{
+    .centraliza{
+        text-align: center;
+    }
+    
+    .titulo{
         font-size: 38px;
         margin-left: -20px;
         text-align: center;
