@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Aval_Prof extends Model
 {
     use HasFactory;
-    protected $table = 'avaliacao';
+    protected $table = 'avaliacao_professor';
     public $timestamps = false;
 
     public function tcc(): BelongsTo

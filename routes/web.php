@@ -38,9 +38,12 @@ Route::get('detalhado',
     [AvaliadorController::class, 'detalhado']
 );
 
-Route::get('/avaliacao_professor', function () {
-    return view('cadastro-usuario');
-});
+Route::get('/avaliacao_professor', 
+[AvaliadorController::class, 'avaliacao_professor']);
+
+Route::post('/salvar_prof', 
+    [AvaliadorController::class, 'salvar_prof']
+);
 
 Route::get('/login', function () {
     return view('login');

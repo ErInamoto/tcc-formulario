@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Avaliacao;
+use App\Models\Aval_Prof;
 use App\Models\TCC;
 use App\Models\Curso;
 use Illuminate\Support\Facades\Session;
@@ -90,6 +91,45 @@ class AvaliadorController extends Controller
 			'TCCs' => $TCCs,
 			'cursos' => $cursos,
 		]);
+	}
+
+	public function avaliacao_professor()
+	{
+		$avaliacoes = Avaliacao::all();
+		$cursos = Curso::all();
+		$TCCs= TCC::all();
+
+		return view('avaliacao-professor', [
+			'TCCs' => $TCCs,
+			'cursos' => $cursos,
+		]);
+	}
+
+	public function salvar_prof(Request $request)
+	{
+		$form = $request->all();
+		$avaliacao = new Aval_Prof;
+		$avaliacao->id_tcc =@$form["TCC"];
+		$avaliacao->professor= @$form["nome"];
+		$avaliacao->comunicacao= @$form["men_oral"];
+		$avaliacao->habilidades= @$form["habilidades"];
+		$avaliacao->criatividade= @$form["criatividade"];
+		$avaliacao->dinamica= @$form["dinamica"];
+		$avaliacao->canvas= @$form["canvas"];
+		$avaliacao->impacto= @$form["impacto"];
+		$avaliacao->inclusao= @$form["inclusao"];
+		$avaliacao->feteps= @$form["feteps"];
+		$avaliacao->inova= @$form["inova"];
+		$avaliacao->workshop= @$form["workshop"];
+		$avaliacao->outro= @$form["outro"];
+		$avaliacao->coment_tcc= @$form["coment_tcc"];
+		$avaliacao->coment_mostra= @$form["coment_mostra"];
+		$avaliacao->startup= @$form["startup"];
+		$avaliacao->comunicacao= @$form["men_oral"];
+		$avaliacao->escrita= @$form["men_esc"];
+		$avaliacao->avaliacao= @	$form["mencao"];
+		$avaliacao->save();
+		return view('enviado');
 	}
 
 }
