@@ -38,6 +38,10 @@ Route::get('detalhado',
     [AvaliadorController::class, 'detalhado']
 );
 
+Route::get('detalhado_prof',
+    [AvaliadorController::class, 'detalhado_prof']
+);
+
 Route::get('/avaliacao_professor', 
 [AvaliadorController::class, 'avaliacao_professor']);
 

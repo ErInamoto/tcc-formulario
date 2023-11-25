@@ -62,11 +62,15 @@ class AvaliadorController extends Controller
 		$id=$request->input('id');
 		$TCC=TCC::find($id);
 		$avaliacoes = Avaliacao::all();
+		$prof = Aval_Prof::all();
 		return view('resultado',
 	[
 		'TCC'=>$TCC,
-		'Avaliacoes'=>$avaliacoes
+		'Avaliacoes'=>$avaliacoes,
+		'prof'=>$prof
 	]);
+
+
 		
 	}
 
@@ -78,6 +82,17 @@ class AvaliadorController extends Controller
 		[
 			'Avaliacao'=>$avaliacao,
 			'detalhado'=>$detalhado
+		]);
+	}
+
+	public function detalhado_prof(Request $request){
+		$id=$request->input('id');
+		$aval=Aval_Prof::find($id);
+		$prof = Aval_Prof::all();
+		return view('detalhado_prof',
+		[
+			'aval'=>$aval,
+			'prof'=>$prof
 		]);
 	}
 
@@ -127,7 +142,7 @@ class AvaliadorController extends Controller
 		$avaliacao->startup= @$form["startup"];
 		$avaliacao->comunicacao= @$form["men_oral"];
 		$avaliacao->escrita= @$form["men_esc"];
-		$avaliacao->avaliacao= @	$form["mencao"];
+		$avaliacao->avaliacao= @$form["mencao"];
 		$avaliacao->save();
 		return view('enviado');
 	}

@@ -94,30 +94,13 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="3"> 
+                <td colspan="3">
                     É muito caro para ser implementado
                 </td>
                 <td colspan="2">
                     {{ $TCC->porcentagemCaro() }}%
                 </td>
             </tr>
-            <!-- <tr>
-                <td>
-
-                </td>
-                <td class="center">
-                    MB
-                </td>
-                <td class="center">
-                    B
-                </td>
-                <td class="center">
-                    R
-                </td>
-                <td class="center">
-                    I
-                </td>
-            </tr> -->
             <tr>
                 <td>
                     Comunicação Oral
@@ -137,7 +120,7 @@
                 </td>
             </tr>
             <tr>
-            <td>
+                <td>
                     Comunicação Escrita
                 </td>
                 <td>
@@ -155,7 +138,7 @@
                 </td>
             </tr>
             <tr>
-            <td>
+                <td>
                     Avaliação Geral
                 </td>
                 <td>
@@ -174,7 +157,172 @@
             </tr>
 
     </table>
-<br>
+
+    <table>
+        <thead>
+            <th colspan="5" class="center">
+                Resumo de Avaliações dos Professores
+            </th>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td colspan="5">
+                    Total de Avaliações {{ $TCC->prof->count()}}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Comunicação Oral
+                </td>
+                <td>
+                    MB {{ $TCC->prctComProfMB() }}%
+                </td>
+                <td>
+                    B {{ $TCC->prctComProfB() }}%
+                </td>
+
+                <td>
+                    R {{ $TCC->prctComProfR() }}%
+                </td>
+                <td>
+                    I {{ $TCC->prctComProfI() }}%
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Habilidades Técnicas
+                </td>
+                <td>
+                    MB {{ $TCC->prctHabProfMB() }}%
+                </td>
+                <td>
+                    B {{ $TCC->prctHabProfB() }}%
+                </td>
+
+                <td>
+                    R {{ $TCC->prctHabProfR() }}%
+                </td>
+                <td>
+                    I {{ $TCC->prctHabProfI() }}%
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Criatividade do Stand
+                </td>
+                <td>
+                    MB {{ $TCC->prctCriProfMB() }}%
+                </td>
+                <td>
+                    B {{ $TCC->prctCriProfB() }}%
+                </td>
+
+                <td>
+                    R {{ $TCC->prctCriProfR() }}%
+                </td>
+                <td>
+                    I {{ $TCC->prctCriProfI() }}%
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Dinâmica da Apresentação
+                </td>
+                <td>
+                    MB {{ $TCC->prctDinProfMB() }}%
+                </td>
+                <td>
+                    B {{ $TCC->prctDinProfB() }}%
+                </td>
+
+                <td>
+                    R {{ $TCC->prctDinProfR() }}%
+                </td>
+                <td>
+                    I {{ $TCC->prctDinProfI() }}%
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    Comunicação Escrita
+                </td>
+                <td>
+                    MB {{ $TCC->prctEscProfMB() }}%
+                </td>
+                <td>
+                    B {{ $TCC->prctEscProfB() }}%
+                </td>
+
+                <td>
+                    R {{ $TCC->prctEscProfR() }}%
+                </td>
+                <td>
+                    I {{ $TCC->prctEscProfI() }}%
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Avaliação Geral
+                </td>
+                <td>
+                    MB {{ $TCC->prctAvalProfMB() }}%
+                </td>
+                <td>
+                    B {{ $TCC->prctAvalProfB() }}%
+                </td>
+
+                <td>
+                    R {{ $TCC->prctAvalProfR() }}%
+                </td>
+                <td>
+                    I {{ $TCC->prctAvalProfI() }}%
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="1,25">
+                    Utilizou o Canvas?
+                </td>
+
+                <td colspan="1,25">
+                    {{ round($TCC->prof->avg("canvas")*100,1)}}%
+                </td>
+                <td colspan="2,25">
+                    Tem um impacto ambiental?
+                </td>
+                <td colspan="1,25">
+                    {{ round($TCC->prof->avg("impacto")*100,1)}}%
+                </td>
+
+            </tr>
+
+            <tr>
+                <td colspan="1,5">
+                    É inclusivo?
+                </td>
+                <td colspan="1,5">
+                    {{ round($TCC->prof->avg("inclusivo")*100,1)}}%
+                </td>
+
+                <td colspan="2,5">
+                    Pode se tornar uma Startup?
+                </td>
+                <td colspan="1,5">
+                    {{ round($TCC->prof->avg("startup")*100,1)}}%
+                </td>
+            </tr>
+
+
+    </table>
+
+    <br>
+
     <table>
         <thead>
             <th>
@@ -231,33 +379,70 @@
     </table>
 
 
-    <p>Serviços Juridicos</p>
-    Questão 6 <progress value="50" max="100"></progress> <br>
-    Questão 7<progress value="50" max="100"></progress> <br>
-    Questão 8<progress value="50" max="100"></progress> <br>
-    Questão 9 <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress> <br>
-    Questão 10 <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress> <br>
-    Questão 11 <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress> <br>
-    Questão 12 <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress> <br>
-    Questão 13 <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress>
-    <progress value="50" max="100"></progress> <br>
 
 
 
+    <table>
+        <thead>
+            <th>
+                Nome do Professor(a)
+            </th>
+            <th>
+                Habilidades 
+            </th>
 
+            <th>
+                Criatividade
+            </th>
 
+            <th>
+                Dinâmica
+            </th>
+            <th>
+                Oral
+            </th>
+            <th>
+                Escrita
+            </th>
+            <th>
+                Geral
+            </th>
+            <th>
+
+            </th>
+        </thead>
+        <tbody>
+            @foreach ($prof as $p)
+            <tr>
+                <td>
+                    {{ $p->professor }}
+                </td>
+                <td>
+                    {{ $p->comunicacao}}
+                </td>
+                <td>
+                    {{ $p->habilidades}}
+                </td>
+                <td>
+                    {{ $p->criatividade}}
+                </td>
+                <td>
+                    {{$p->dinamica}}
+                </td>
+                <td>
+                    {{ $p->escrita}}
+                </td>
+                <td>
+                    {{ $p->avaliacao}}
+                </td>
+                <td>
+                    <a href="detalhado_prof?id={{ $Av->id }}">
+                        Detalhado
+                    </a>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 
 </x-layout>

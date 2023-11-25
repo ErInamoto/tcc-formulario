@@ -18,7 +18,7 @@ class TCC extends Model
         
     }
 
-    public function avaliacoes_prof(): HasMany
+    public function prof(): HasMany
     {
         return $this->hasMany(Aval_Prof::class, 'id_tcc');
         
@@ -110,5 +110,102 @@ class TCC extends Model
 
     public function porcentagemAvaliacaoI(){
         return round($this->avaliacoes->where("avaliacao", "=", "I")->count() / $this->avaliacoes->count()*100,1);
+    }
+
+    public function prctComProfMB(){
+        return round($this->prof->where("comunicacao", "=", "MB")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctComProfB(){
+        return round($this->prof->where("comunicacao", "=", "B")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctComProfR(){
+        return round($this->prof->where("comunicacao", "=", "R")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctComProfI(){
+        return round($this->prof->where("comunicacao", "=", "I")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctHabProfMB(){
+        return round($this->prof->where("habilidades", "=", "MB")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctHabProfB(){
+        return round($this->prof->where("habilidades", "=", "B")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctHabProfR(){
+        return round($this->prof->where("habilidades", "=", "R")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctHabProfI(){
+        return round($this->prof->where("habilidades", "=", "I")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctCriProfMB(){
+        return round($this->prof->where("criatividade", "=", "MB")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctCriProfB(){
+        return round($this->prof->where("criatividade", "=", "B")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctCriProfR(){
+        return round($this->prof->where("criatividade", "=", "R")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctCriProfI(){
+        return round($this->prof->where("criatividade", "=", "I")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctDinProfMB(){
+        return round($this->prof->where("dinamica", "=", "MB")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctDinProfB(){
+        return round($this->prof->where("dinamica", "=", "B")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctDinProfR(){
+        return round($this->prof->where("dinamica", "=", "R")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctDinProfI(){
+        return round($this->prof->where("dinamica", "=", "I")->count()*100 / ($this->prof->count()),1);
+    }
+    
+    public function prctEscProfMB(){
+        return round($this->prof->where("escrita", "=", "MB")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctEscProfB(){
+        return round($this->prof->where("escrita", "=", "B")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctEscProfR(){
+        return round($this->prof->where("escrita", "=", "R")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctEscProfI(){
+        return round($this->prof->where("escrita", "=", "I")->count()*100 / ($this->prof->count()),1);
+    }
+
+        
+    public function prctAvalProfMB(){
+        return round($this->prof->where("avaliacao", "=", "MB")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctAvalProfB(){
+        return round($this->prof->where("avaliacao", "=", "B")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctAvalProfR(){
+        return round($this->prof->where("avaliacao", "=", "R")->count()*100 / ($this->prof->count()),1);
+    }
+
+    public function prctAvalProfI(){
+        return round($this->prof->where("avaliacao", "=", "I")->count()*100 / ($this->prof->count()),1);
     }
 }
