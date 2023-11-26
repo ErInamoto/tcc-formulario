@@ -436,7 +436,7 @@
                     {{ $p->avaliacao}}
                 </td>
                 <td>
-                    <a href="detalhado_prof?id={{ $Av->id }}">
+                    <a href="detalhado_prof?id={{ $p->id }}">
                         Detalhado
                     </a>
                 </td>

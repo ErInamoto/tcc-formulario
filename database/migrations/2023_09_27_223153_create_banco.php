@@ -44,7 +44,7 @@ return new class extends Migration
             startup INT NOT NULL,
             feteps INT,
             inova INT,
-            workshop,
+            workshop int,
             outro VARCHAR(100),
             coment_tcc VARCHAR(100),
             coment_mostra VARCHAR(100),
