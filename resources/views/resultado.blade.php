@@ -1,7 +1,7 @@
 <x-layout>
     <h1>{{ $TCC->nome }}</h1>
 
-    <table>
+    <table class="tabera">
         <thead>
             <th colspan="5" class="center">
                 Resumo de Avaliações dos Alunos
@@ -158,7 +158,7 @@
 
     </table>
 
-    <table>
+    <table class="tabera">
         <thead>
             <th colspan="5" class="center">
                 Resumo de Avaliações dos Professores
@@ -323,7 +323,7 @@
 
     <br>
 
-    <table>
+    <table class="tabera">
         <thead>
             <th>
                 Nome
@@ -382,7 +382,7 @@
 
 
 
-    <table>
+    <table class="tabera">
         <thead>
             <th>
                 Nome do Professor(a)

@@ -12,7 +12,8 @@
 
     <link rel="stylesheet" type="text/css" href="/css/flex-style.css">
     <link rel="stylesheet" type="text/css" href="css/flex.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">   
+    <link rel="stylesheet" type="text/css" href="css/index.css"> 
+    <link rel="stylesheet" type="text/css" href="css/avaliacao-professor.css"> 
 </head>
 
 <body>

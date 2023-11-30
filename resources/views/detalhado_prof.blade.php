@@ -2,8 +2,8 @@
 
     <h1>Avaliação do(a) {{ $aval->professor }}</h1>
     <br>
-    <div class="centralizar">
-    <table>
+    
+    <table class="tabera">
         <thead>
             <th colspan="5" class="center">
                 Avaliação

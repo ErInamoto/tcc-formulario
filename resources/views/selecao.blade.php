@@ -1,7 +1,8 @@
 <x-layout> 
     <h1>Selecione um TCC para ver mais detalhes</h1>
     <br><br>
-    <table> <thead>
+    <div class="tabela">
+    <table class="tabera table-status"> <thead>
     <tr>
     <th> Nome do TCC </th>
     <th> Avaliações </th>
@@ -30,5 +31,6 @@
             @endforeach
         </tbody>
         </table>
+        </div>
 </main>
         </x-layout>
