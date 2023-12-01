@@ -159,6 +159,6 @@
     </table>
     </div>
 
-    <button href="></button>
+    <a href="resultado?id={{$Avaliacao->id_tcc}}">Voltar</a>
 
 </x-layout>

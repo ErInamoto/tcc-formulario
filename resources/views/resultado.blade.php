@@ -444,5 +444,5 @@
             @endforeach
         </tbody>
     </table>
-
+<a href="/selecao">Voltar</a>
 </x-layout>

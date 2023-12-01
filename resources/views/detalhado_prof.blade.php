@@ -136,6 +136,8 @@
 
     </tbody>
     </table>
-    </div>
 
+    
+    </div>
+    <a href="resultado?id={{$aval->id_tcc}}">Voltar</a>
 </x-layout>
